@@ -483,8 +483,8 @@ header .container i.moon {
 .content3 .container .left-container .picks .pick .card-box .card:hover {
   -webkit-transform: translateY(-5px);
           transform: translateY(-5px);
-  -webkit-box-shadow: rgba(1, 1, 1, 0.25) 1px 1px 5px 0px;
-          box-shadow: rgba(1, 1, 1, 0.25) 1px 1px 5px 0px;
+  -webkit-box-shadow: rgba(1, 1, 1, 0.25) 2px 2px 10px 0px;
+          box-shadow: rgba(1, 1, 1, 0.25) 2px 2px 10px 0px;
 }
 
 .content3 .container .left-container .picks .pick .card-box .card img {
@@ -664,11 +664,13 @@ header .container i.moon {
 
 .content4 {
   background-color: #f8f9fa;
-  padding-top: 48px;
+  padding-top: 192px;
 }
 
 .content4 .container {
-  padding-left: 15px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0px 8px;
 }
 
 .content4 .container .header-title h3 {
@@ -677,5 +679,43 @@ header .container i.moon {
   font-size: 26px;
   line-height: 36px;
   font-weight: 700;
+  padding: 0px 8px;
+}
+
+.content4 .container .header-title a {
+  display: inline-block;
+  margin-top: 7.5px;
+  margin-right: 6px;
+  background-color: #e2e8f0;
+  border-radius: 15px;
+  color: #718096;
+  font-weight: 500;
+  padding: 6px 20px;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.content4 .container .header-title a:hover {
+  color: #fff;
+  background-color: #5a67d8;
+}
+
+.content4 .container .fashion-style-cards {
+  width: 1200px;
+  height: 470px;
+}
+
+.content4 .container .fashion-style-cards .pick {
+  width: 400px;
+  margin-top: 25px;
+}
+
+.content4 .container .fashion-style-cards .pick .card-box {
+  padding: 0px 15px;
+}
+
+.content4 .container .fashion-style-cards .pick .card-box .card {
+  border-radius: 15px;
+  background-color: white;
 }
 /*# sourceMappingURL=style.css.map */
