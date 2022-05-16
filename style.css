@@ -198,14 +198,12 @@ header .container i.moon {
 .button {
   position: fixed;
   top: 150px;
-  right: 20px;
+  right: 35px;
 }
 
 .button form input {
-  z-index: -1;
   position: relative;
-  left: 40px;
-  top: 12px;
+  display: none;
 }
 
 .button form input:checked ~ label i {
@@ -246,7 +244,7 @@ header .container i.moon {
   position: absolute;
   padding: 0px 5px;
   top: -10px;
-  left: 34px;
+  left: 37px;
   width: 90px;
   height: 321px;
   -webkit-transition: left 0.4s;
