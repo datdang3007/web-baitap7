@@ -125,6 +125,99 @@ header {
     }
 }
 
+.button {
+    position: fixed;
+    top: 150px;
+    right: 20px;
+    form {
+        input {
+            z-index: -1;
+            position: relative;
+            left: 40px;
+            top: 12px;
+            &:checked {
+                ~ label {
+                    i {
+                        transform: rotate(180deg);
+                        color: rgba(230,235,255,0.5);
+                    }
+                }
+                ~ .function {
+                    left: -57px;
+                }
+            }
+        }
+        label {
+            position: absolute;
+            top: 15px;
+            left: -20px;
+            i {
+                cursor: pointer;
+                z-index: 10;
+                font-size: 18px;
+                color: #e6ebff;
+            }
+            &::before {
+                z-index: 10;
+                content: "";
+                cursor: pointer;
+                position: absolute;
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                background-color: rgba(13,19,38, 0.5);
+            }
+        }
+        .function {
+            position: absolute;
+            padding: 0px 5px;
+            top: -10px;
+            left: 34px;
+            width: 90px;
+            height: 321px;
+            transition: left 0.4s;
+            border-top-left-radius: 10px;
+            border-bottom-left-radius: 10px;
+            background-color: #0D1326;
+            .box1 {
+                width: 90px;
+                height: 70px;
+                border-bottom: 1px solid rgba(230,235,255,0.2);
+            }
+            .box2 {
+                width: 80px;
+                height: 190px;
+                text-align: center;
+                // background-color: white;
+                padding: 35px 0px 20px;
+                .function-button {
+                    cursor: pointer;
+                    &:hover {
+                        i,span {
+                            color: rgb(230,235,255);
+                        }
+                    }
+                    i {
+                        position: relative;
+                        font-size: 18px;
+                        color: rgba(230,235,255,0.7);
+                        transition: 0.4s;
+                    }
+                    i.buy {
+                        font-size: 13px;
+                    }
+                    span {
+                        display: inline-block;
+                        color: rgba(230,235,255,0.7);
+                        margin-bottom: 15px;
+                        transition: 0.4s;
+                    }
+                }
+            }
+        }
+    }
+}
+
 .content1 {
     padding-top: 92px;
     background-color: $grey;
@@ -336,6 +429,7 @@ header {
                 display: flex;
                 flex-wrap: wrap;
                 .pick {
+                    cursor: pointer;
                     width: 50%;
                     margin-top: 25px;
                     .card-box {
@@ -350,6 +444,7 @@ header {
                                 box-shadow: rgba(1,1,1, 0.25) 2px 2px 10px 0px;
                             }
                             img {
+                                cursor: pointer;
                                 border-top-left-radius: 15px;
                                 border-top-right-radius: 15px;
                                 width: 100%;
@@ -508,11 +603,12 @@ header {
 
 .content4 {
     background-color: $bg-lightgrey;
-    padding-top: 192px;
+    padding-top: 185px;
+    padding-bottom: 95px;
     .container {
         box-sizing: border-box;
-        padding: 0px 8px;
         .header-title {
+            padding: 0px 8px;
             h3 {
                 color: $heading-color;
                 font-family: 'Libre Baskerville', serif;
@@ -550,14 +646,505 @@ header {
                     .card {
                         border-radius: 15px;
                         background-color: white;
-                        box-shadow: rgb(1 1 1 / 5%) 1px 1px 5px 0px;
+                        box-shadow: rgba(1,1,1, 0.05) 1px 1px 5px 0px;
+                        transition: 0.4s;
+                        &:hover {
+                            transform: translateY(-5px);
+                            box-shadow: rgba(1,1,1, 0.25) 2px 2px 10px 0px;
+                        }
                         img {
+                            cursor: pointer;
                             border-top-left-radius: 15px;
                             border-top-right-radius: 15px;
                             width: 100%;
                             height: 250px;
-                            width: 370px;
-                            height: 250px;
+                        }  
+
+                        .card-title {
+                            box-sizing: border-box;
+                            width: 100%;
+                            padding: 30px 25px 27.5px;
+                            > a {
+                                display: inline-block;
+                                font-size: 21.6px;
+                                line-height: 1.33;
+                                font-weight: 700;
+                                color: $heading-color;
+                                transition: 0.4s;
+                                &:hover {
+                                    color: $primary-color;
+                                }
+                            }
+                            .logo-date {
+                                width: 100%;
+                                margin-top: 16px;
+                                img {
+                                    width: 56px;
+                                    height: 56px;
+                                    cursor: pointer;
+                                }
+                                .brand-date {
+                                    margin-left: 10px;
+                                    span.brand {
+                                        cursor: pointer;
+                                        font-size: 18px;
+                                        font-weight: 500;
+                                        line-height: 28px;
+                                        color: $heading-color;
+                                    }
+                                    .date-time {
+                                        color: $font-color;
+                                        span.time {
+                                            margin-left: 15px;
+                                            i {
+                                                margin-right: 5px;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.content5 {
+    background-color: $grey;
+    padding: 80px 0px 95px;
+    .container {
+        box-sizing: border-box;
+        .header-title {
+            padding: 0px 8px;
+            h3 {
+                color: $heading-color;
+                font-family: 'Libre Baskerville', serif;
+                font-size: 26px;
+                line-height: 36px;
+                font-weight: 700;
+                padding: 0px 8px;
+            }
+
+            a {
+                display: inline-block;
+                margin-top: 7.5px;
+                margin-right: 6px;
+                background-color: #e2e8f0;
+                border-radius: 15px;
+                color: $font-color;
+                font-weight: 500;
+                padding: 6px 20px;
+                transition: 0.4s;
+                &:hover {
+                    color: #fff;
+                    background-color: $primary-color;
+                }
+            }
+        }
+
+        .Beauty-cards {
+            display: flex;
+            flex-wrap: wrap;
+            .pick {
+                width: 600px;
+                height: 300px;
+                margin-top: 25px;
+                .card-box {
+                    padding: 0px 15px;
+                    .card {
+                        border-radius: 15px;
+                        background-color: #fff;
+                        box-shadow: rgba(1,1,1, 0.05) 1px 1px 5px 0px;
+                        transition: 0.4s;
+                        &:hover {
+                            transform: translateY(-5px);
+                            box-shadow: rgba(1,1,1, 0.25) 2px 2px 10px 0px;
+                        }
+
+                        .image {
+                            width: 385px;
+                            height: 300px;
+                            border-top-left-radius: 15px;
+                            border-bottom-left-radius: 15px;
+                            overflow: hidden;
+                            img {
+                                cursor: pointer;
+                                width: 100%;
+                                height: 300px;
+                                transform: scaleX(1.275);
+                            }
+                        }
+
+                        .card-title {
+                            box-sizing: border-box;
+                            width: 100%;
+                            padding: 30px 25px 27.5px;
+                            > a {
+                                display: inline-block;
+                                font-size: 21.6px;
+                                line-height: 1.33;
+                                font-weight: 700;
+                                color: $heading-color;
+                                transition: 0.4s;
+                                &:hover {
+                                    color: $primary-color;
+                                }
+                            }
+                            .logo-date {
+                                width: 100%;
+                                margin-top: 16px;
+                                img {
+                                    width: 56px;
+                                    height: 56px;
+                                    cursor: pointer;
+                                }
+                                .brand-date {
+                                    margin-left: 10px;
+                                    span.brand {
+                                        cursor: pointer;
+                                        font-size: 18px;
+                                        font-weight: 500;
+                                        line-height: 28px;
+                                        color: $heading-color;
+                                    }
+                                    .date-time {
+                                        color: $font-color;
+                                        span.time {
+                                            margin-left: 15px;
+                                            i {
+                                                margin-right: 5px;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.content6 {
+    background-color: $bg-lightgrey;
+    padding: 95px 0px;
+    .container {
+        box-sizing: border-box;
+        .header-title {
+            padding: 0px 8px;
+            h3 {
+                color: $heading-color;
+                font-family: 'Libre Baskerville', serif;
+                font-size: 26px;
+                line-height: 36px;
+                font-weight: 700;
+                padding: 0px 8px;
+            }
+
+            a {
+                display: inline-block;
+                margin-top: 7.5px;
+                margin-right: 6px;
+                background-color: #e2e8f0;
+                border-radius: 15px;
+                color: $font-color;
+                font-weight: 500;
+                padding: 6px 20px;
+                transition: 0.4s;
+                &:hover {
+                    color: #fff;
+                    background-color: $primary-color;
+                }
+            }
+        }
+
+        .trending-cards {
+            display: flex;
+            flex-wrap: wrap;
+            .pick {
+                width: 600px;
+                height: 300px;
+                margin-top: 25px;
+                .card-box {
+                    padding: 0px 15px;
+                    .card {
+                        border-radius: 15px;
+                        background-color: #fff;
+                        box-shadow: rgba(1,1,1, 0.05) 1px 1px 5px 0px;
+                        transition: 0.4s;
+                        &:hover {
+                            transform: translateY(-5px);
+                            box-shadow: rgba(1,1,1, 0.25) 2px 2px 10px 0px;
+                        }
+
+                        .image {
+                            cursor: pointer;
+                            width: 385px;
+                            height: 300px;
+                            border-top-left-radius: 15px;
+                            border-bottom-left-radius: 15px;
+                            overflow: hidden;
+                            img {
+                                width: 100%;
+                                height: 300px;
+                                transform: scaleX(2.05);
+                            }
+                        }
+                        
+                        .card-title {
+                            box-sizing: border-box;
+                            width: 100%;
+                            padding: 30px 25px 27.5px;
+                            > span {
+                                display: inline-block;
+                                color: $primary-color;
+                                font-weight: 600;
+                                background: rgba(90, 103, 216, 0.05);
+                                border-radius: 15px;
+                                margin-bottom: 16px;
+                                padding: 5px 20px;
+                                a {
+                                    color: $primary-color;
+                                    transition: 0.4s;
+                                    &:hover {
+                                        color: #4650a8;
+                                    }
+                                }
+                            }
+                            > a {
+                                display: inline-block;
+                                font-size: 21.6px;
+                                line-height: 1.33;
+                                font-weight: 700;
+                                color: $heading-color;
+                                transition: 0.4s;
+                                &:hover {
+                                    color: $primary-color;
+                                }
+                            }
+                            .logo-date {
+                                width: 100%;
+                                margin-top: 16px;
+                                img {
+                                    width: 56px;
+                                    height: 56px;
+                                    cursor: pointer;
+                                }
+                                .brand-date {
+                                    margin-left: 10px;
+                                    span.brand {
+                                        cursor: pointer;
+                                        font-size: 18px;
+                                        font-weight: 500;
+                                        line-height: 28px;
+                                        color: $heading-color;
+                                    }
+                                    .date-time {
+                                        color: $font-color;
+                                        span.time {
+                                            margin-left: 15px;
+                                            i {
+                                                margin-right: 5px;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.content7 {
+    background-color: $grey;
+    padding: 95px 0px;
+    .container {
+        box-sizing: border-box;
+        padding: 0px 15px;
+        .bg-white {
+            box-sizing: border-box;
+            text-align: center;
+            background-color: #fff;
+            padding-top: 96px;
+            width: 1170px;
+            height: 365px;
+            border-radius: 15px;
+            box-shadow: rgba(1,1,1, 0.05) 1px 1px 5px 0px;
+            h3 {
+                font-size: 26px;
+                line-height: 36px;
+                font-weight: 700;
+                margin-bottom: 8px;
+                color: $heading-color;
+                font-family: 'Libre Baskerville', serif;
+            }
+            p {
+                font-size: 18px;
+                line-height: 28px;
+                margin-bottom: 48px;
+                color: $font-color;
+            }
+            form {
+                input {
+                    box-sizing: border-box;
+                    position: relative;
+                    width: 400px;
+                    height: 52px;
+                    right: 0;
+                    color: $font-color;
+                    font-size: 17px;
+                    font-weight: 400;
+                    border-radius: 6px;
+                    background-color: $grey;
+                    padding-left: 20px;
+                }
+                button {
+                    &:hover {
+                        label {
+                            background-color: #4650a8;
+                        }
+                    }
+                    label {
+                        cursor: pointer;
+                        padding: 12px 35px;
+                        font-size: 16px;
+                        line-height: 26px;
+                        font-weight: 600;
+                        border-radius: 6px;
+                        transition: 0.4s;
+                        background-color: $primary-color;
+                        color: #fff;
+                    }
+                }
+            }
+        }
+    }
+}
+
+footer {
+    .container {
+        box-sizing: border-box;
+        height: 460px;
+        padding-top: 64px;
+        .info {
+            width: 390px;
+            padding: 0px 15px;
+            height: 333;
+            a.logo {
+                margin: -5px 0px 15px;
+                i {
+                    color: $primary-color;
+                    font-size: 26px;
+                }
+                h1 {
+                    margin-left: 10px;
+                    color: $heading-color;
+                    font-weight: 600;
+                    font-size: 28px;
+                    font-family: 'Hind', sans-serif;
+                }
+            }
+            p {
+                color: $font-color;
+                font-size: 18px;
+                line-height: 28px;
+            }
+            span {
+                display: inline-block;
+                margin-top: 8px;
+                font-weight: 600;
+                font-size: 18px;
+                line-height: 28px;
+                color: $heading-color;
+                font-family: 'Libre Baskerville', serif;
+                a {
+                    color: $primary-color;
+                    &:hover {
+                        color: #4650a8;
+                    }
+                }
+            }
+        }
+
+        .contact {
+            display: flex;
+            width: 800px;
+            height: 333px;
+            ul {
+                box-sizing: border-box;
+                width: 227px;
+                span {
+                    display: inline-block;
+                }
+                > span {
+                    color: $heading-color;
+                    font-size: 20px;
+                    line-height: 28px;
+                    margin-bottom: 20px;
+                    font-weight: 600;
+                    font-family: 'Libre Baskerville', serif;
+                }
+                li {
+                    a {
+                        color: $font-color;
+                        font-size: 18px;
+                        line-height: 24px;
+                        display: inline-block;
+                        transition: 0.4s;
+                        &:hover {
+                            color: $heading-color;
+                        }
+                    }
+                }
+            }
+
+            ul.recent {
+                margin-right: 30px;
+                li {
+                    span {
+                        font-size: 80%;
+                        margin-bottom: 16px;
+                        color: $font-color;
+                    }
+                }
+            }
+
+            ul.categories {
+                margin-right: 32px;
+                li {
+                    margin-bottom: 8px;
+                }
+            }
+
+            ul.social {
+                li {
+                    margin-bottom: 8px;
+                    a {
+                        i {
+                            font-size: 14px;
+                            width: 25px;
+                        }
+
+                        i.fb {
+                            color: #3a5998;
+                        }
+
+                        i.twitter {
+                            color: #55acee;
+                        }
+
+                        i.linkedin {
+                            color: #00a0dc;
+                        }
+
+                        i.dribbble {
+                            color: #ea4c89;
                         }
                     }
                 }
