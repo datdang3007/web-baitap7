@@ -300,8 +300,6 @@ header .container .content i.moon {
 
 .content1 .container .content {
   position: relative;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
   height: 815px;
 }
 
