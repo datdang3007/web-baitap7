@@ -9,39 +9,53 @@ $primary-color: #5a67d8;
 $font-color: #718096;
 $heading-color: #2d3748;
 $bg-lightgrey: #f8f9fa;
+$bg-color: #131617;
+$bg-grey: #0b0d0e;
 
 .container {
     width: 1200px;
     margin: 0 auto;
 }
 
-// .mode {
-//     > form {
-//         > input {
-//             opacity: 1;
-//             width: 20px;
-//             height: 20px;
-//             position: fixed;
-//             z-index: 10;
-//             top: 36px;
-//             // right: 375px;
-//             right: 300px;
+.mode {
+    > form {
+        > input {
+            opacity: 0;
+            width: 20px;
+            height: 20px;
+            position: fixed;
+            z-index: 10;
+            top: 36px;
+            right: 375px;
 
-//             &:checked {
-//                 header {
-//                     .container {
-//                         i.sun {
-//                             display: block;
-//                         }
-//                         i.moon {
-//                             display: none;
-//                         }
-//                     }
-//                 }
-//             }
-//         }
-//     }
-// }
+            &:checked {
+                ~ header {
+                    background-color: $bg-color;
+                    .container {
+                        a.logo {
+                            h1 {
+                                color: #fff;
+                            }
+                        }
+                        i.sun {
+                            display: block;
+                        }
+                        i.moon {
+                            display: none;
+                        }
+                        form {
+                            .input-group {
+                                input {
+                                    background-color: $bg-grey;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
 
 header {
     z-index: 9;
@@ -67,35 +81,45 @@ header {
                 font-family: 'Hind', sans-serif;
             }
         }
-        form{
-            position: absolute;
-            left: 50%;
-            top: 50%;
-            transform: translate(-50%, -50%);
-            .input-group {
-                display: flex;
-                width: 400px;
-                height: 48px;
-                box-sizing: border-box;
-                button {
-                    padding: 10px 20px;
-                    background-color: $grey;
-                    border-top-left-radius: 6px;
-                    border-bottom-left-radius: 6px;
-                    color: $font-color;
-                }
-                input {
-                    background-color: $grey;
-                    width: 100%;
-                    padding: 10px;
-                    padding-left: 0px;
-                    border-top-right-radius: 6px;
-                    border-bottom-right-radius: 6px;
-                    color: $font-color;
-                    font-size: 17px;
-                }
+
+        form {
+            input {
+                background-color: $grey;
+                width: 100%;
+                padding: 10px 20px 10px 50px;
             }
         }
+
+        // form{
+        //     position: absolute;
+        //     left: 50%;
+        //     top: 50%;
+        //     transform: translate(-50%, -50%);
+        //     .input-group {
+        //         width: 400px;
+        //         height: 48px;
+        //         box-sizing: border-box;
+        //         button {
+        //             padding: 10px 20px;
+        //             background-color: $grey;
+        //             border-top-left-radius: 6px;
+        //             border-bottom-left-radius: 6px;
+        //             i {
+        //                 color: $font-color;
+        //             }
+        //         }
+        //         input {
+        //             background-color: $grey;
+        //             width: 100%;
+        //             padding: 10px;
+        //             padding-left: 0px;
+        //             border-top-right-radius: 6px;
+        //             border-bottom-right-radius: 6px;
+        //             color: $font-color;
+        //             font-size: 17px;
+        //         }
+        //     }
+        // }
         .menu {
             > ul {
                 display: flex;
