@@ -75,7 +75,7 @@ header {
           box-shadow: rgba(100, 100, 111, 0.1) 0px 5px 5px 0px;
 }
 
-header .container .content {
+header .container {
   position: relative;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -83,12 +83,12 @@ header .container .content {
   padding: 22px 22px;
 }
 
-header .container .content a.logo i {
+header .container a.logo i {
   color: #5a67d8;
   font-size: 26px;
 }
 
-header .container .content a.logo h1 {
+header .container a.logo h1 {
   margin-left: 10px;
   color: #2d3748;
   font-weight: 600;
@@ -96,7 +96,7 @@ header .container .content a.logo h1 {
   font-family: 'Hind', sans-serif;
 }
 
-header .container .content form {
+header .container form {
   position: absolute;
   left: 50%;
   top: 50%;
@@ -104,14 +104,17 @@ header .container .content form {
           transform: translate(-50%, -50%);
 }
 
-header .container .content form .input-group {
+header .container form .input-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   width: 400px;
   height: 48px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
 
-header .container .content form .input-group button {
+header .container form .input-group button {
   padding: 10px 20px;
   background-color: #f4f4f4;
   border-top-left-radius: 6px;
@@ -119,7 +122,7 @@ header .container .content form .input-group button {
   color: #718096;
 }
 
-header .container .content form .input-group input {
+header .container form .input-group input {
   background-color: #f4f4f4;
   width: 100%;
   padding: 10px;
@@ -130,16 +133,22 @@ header .container .content form .input-group input {
   font-size: 17px;
 }
 
-header .container .content .menu > ul > li {
+header .container .menu > ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+header .container .menu > ul > li {
   position: relative;
   padding: 10px;
 }
 
-header .container .content .menu > ul > li:hover ul.dropdown {
+header .container .menu > ul > li:hover ul.dropdown {
   display: block;
 }
 
-header .container .content .menu > ul > li a {
+header .container .menu > ul > li a {
   font-size: 18px;
   font-weight: 500;
   color: #718096;
@@ -147,21 +156,23 @@ header .container .content .menu > ul > li a {
   transition: 0.4s;
 }
 
-header .container .content .menu > ul > li a:hover {
+header .container .menu > ul > li a:hover {
   color: #5a67d8;
 }
 
-header .container .content .menu > ul > li i {
+header .container .menu > ul > li i {
   color: #718096;
   margin-left: 5px;
   font-size: 12px;
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
 }
 
-header .container .content .menu > ul > li a.active {
+header .container .menu > ul > li a.active {
   color: #5a67d8;
 }
 
-header .container .content .menu > ul > li ul.dropdown {
+header .container .menu > ul > li ul.dropdown {
   z-index: 10;
   background-color: white;
   position: absolute;
@@ -178,19 +189,20 @@ header .container .content .menu > ul > li ul.dropdown {
           box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
-header .container .content .menu > ul > li ul.dropdown li {
+header .container .menu > ul > li ul.dropdown li {
   padding-top: 5px;
 }
 
-header .container .content i.moon, header .container .content i.sun {
+header .container i.moon, header .container i.sun {
   color: #718096;
   margin-left: 10px;
   font-size: 22px;
-}
-
-header .container .content i.moon {
   -webkit-transform: rotate(-20deg);
           transform: rotate(-20deg);
+}
+
+header .container i.sun {
+  display: none;
 }
 
 .button {
@@ -298,19 +310,19 @@ header .container .content i.moon {
   background-color: #f4f4f4;
 }
 
-.content1 .container .content {
+.content1 .container {
   position: relative;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   height: 815px;
 }
 
-.content1 .container .content ul {
+.content1 .container ul {
   width: 100%;
   height: 251px;
 }
 
-.content1 .container .content ul li {
+.content1 .container ul li {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   width: 281px;
@@ -325,23 +337,23 @@ header .container .content i.moon {
   transition: 0.3s;
 }
 
-.content1 .container .content ul li:hover {
+.content1 .container ul li:hover {
   -webkit-transform: translateY(-5px);
           transform: translateY(-5px);
   -webkit-box-shadow: rgba(100, 100, 111, 0.2) 0px 5px 5px 0px;
           box-shadow: rgba(100, 100, 111, 0.2) 0px 5px 5px 0px;
 }
 
-.content1 .container .content ul li:hover h4 {
+.content1 .container ul li:hover h4 {
   color: #5a67d8;
 }
 
-.content1 .container .content ul li i {
+.content1 .container ul li i {
   color: #5a67d8;
   font-size: 27.5px;
 }
 
-.content1 .container .content ul li h4 {
+.content1 .container ul li h4 {
   margin-top: 10px;
   color: #718096;
   font-weight: 700;
@@ -350,7 +362,7 @@ header .container .content i.moon {
   transition: 0.4s;
 }
 
-.content1 .container .content .items {
+.content1 .container .items {
   position: relative;
   width: 100%;
   height: 480px;
@@ -359,7 +371,7 @@ header .container .content i.moon {
   padding: 10px;
 }
 
-.content1 .container .content .items .bg-img {
+.content1 .container .items .bg-img {
   position: absolute;
   right: 15px;
   width: 370px;
@@ -368,11 +380,11 @@ header .container .content i.moon {
   background: url(/images/beauty.webp) no-repeat center/cover;
 }
 
-.content1 .container .content .items .describe {
+.content1 .container .items .describe {
   height: 247px;
 }
 
-.content1 .container .content .items .describe span.tittle {
+.content1 .container .items .describe span.tittle {
   display: inline-block;
   padding: 5px 20px;
   background-color: rgba(90, 103, 216, 0.05);
@@ -381,7 +393,7 @@ header .container .content i.moon {
   border-radius: 15px;
 }
 
-.content1 .container .content .items .describe h3 {
+.content1 .container .items .describe h3 {
   margin-top: 22.5px;
   font-weight: 600;
   font-size: 45px;
@@ -418,7 +430,7 @@ header .container .content i.moon {
   padding: 48px 0px;
 }
 
-.content2 .container .content {
+.content2 .container {
   position: relative;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -426,7 +438,7 @@ header .container .content i.moon {
   padding: 48px 15px;
 }
 
-.content2 .container .content h3 {
+.content2 .container h3 {
   font-size: 26px;
   line-height: 36px;
   font-weight: 700;
@@ -434,23 +446,23 @@ header .container .content i.moon {
   color: #2d3748;
 }
 
-.content2 .container .content .cards {
+.content2 .container .cards {
   margin-top: 24px;
 }
 
-.content2 .container .content .cards .first-card {
+.content2 .container .cards .first-card {
   background-image: url(/images/card1.webp);
 }
 
-.content2 .container .content .cards .second-card {
+.content2 .container .cards .second-card {
   background-image: url(/images/card2.webp);
 }
 
-.content2 .container .content .cards .third-card {
+.content2 .container .cards .third-card {
   background-image: url(/images/card3.webp);
 }
 
-.content2 .container .content .cards .first-card, .content2 .container .content .cards .second-card, .content2 .container .content .cards .third-card {
+.content2 .container .cards .first-card, .content2 .container .cards .second-card, .content2 .container .cards .third-card {
   width: 370px;
   height: 460px;
   border-radius: 15px;
@@ -460,12 +472,12 @@ header .container .content i.moon {
   transition: 0.4s;
 }
 
-.content2 .container .content .cards .first-card:hover, .content2 .container .content .cards .second-card:hover, .content2 .container .content .cards .third-card:hover {
+.content2 .container .cards .first-card:hover, .content2 .container .cards .second-card:hover, .content2 .container .cards .third-card:hover {
   -webkit-transform: translateY(-5px);
           transform: translateY(-5px);
 }
 
-.content2 .container .content .cards .first-card .bg-blur, .content2 .container .content .cards .second-card .bg-blur, .content2 .container .content .cards .third-card .bg-blur {
+.content2 .container .cards .first-card .bg-blur, .content2 .container .cards .second-card .bg-blur, .content2 .container .cards .third-card .bg-blur {
   position: relative;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -476,53 +488,53 @@ header .container .content i.moon {
   background-color: rgba(0, 0, 0, 0.65);
 }
 
-.content2 .container .content .cards .first-card .bg-blur .tittle, .content2 .container .content .cards .second-card .bg-blur .tittle, .content2 .container .content .cards .third-card .bg-blur .tittle {
+.content2 .container .cards .first-card .bg-blur .tittle, .content2 .container .cards .second-card .bg-blur .tittle, .content2 .container .cards .third-card .bg-blur .tittle {
   position: absolute;
   bottom: 20px;
 }
 
-.content2 .container .content .cards .first-card .bg-blur .tittle a, .content2 .container .content .cards .second-card .bg-blur .tittle a, .content2 .container .content .cards .third-card .bg-blur .tittle a {
+.content2 .container .cards .first-card .bg-blur .tittle a, .content2 .container .cards .second-card .bg-blur .tittle a, .content2 .container .cards .third-card .bg-blur .tittle a {
   font-size: 24px;
   line-height: 1.33;
   font-weight: 700;
   color: white;
 }
 
-.content2 .container .content .cards .first-card .bg-blur .tittle .logo-date, .content2 .container .content .cards .second-card .bg-blur .tittle .logo-date, .content2 .container .content .cards .third-card .bg-blur .tittle .logo-date {
+.content2 .container .cards .first-card .bg-blur .tittle .logo-date, .content2 .container .cards .second-card .bg-blur .tittle .logo-date, .content2 .container .cards .third-card .bg-blur .tittle .logo-date {
   width: 100%;
   margin-top: 16px;
 }
 
-.content2 .container .content .cards .first-card .bg-blur .tittle .logo-date img, .content2 .container .content .cards .second-card .bg-blur .tittle .logo-date img, .content2 .container .content .cards .third-card .bg-blur .tittle .logo-date img {
+.content2 .container .cards .first-card .bg-blur .tittle .logo-date img, .content2 .container .cards .second-card .bg-blur .tittle .logo-date img, .content2 .container .cards .third-card .bg-blur .tittle .logo-date img {
   cursor: pointer;
   border-radius: 50%;
   border: 2px solid #999;
 }
 
-.content2 .container .content .cards .first-card .bg-blur .tittle .logo-date .brand-date, .content2 .container .content .cards .second-card .bg-blur .tittle .logo-date .brand-date, .content2 .container .content .cards .third-card .bg-blur .tittle .logo-date .brand-date {
+.content2 .container .cards .first-card .bg-blur .tittle .logo-date .brand-date, .content2 .container .cards .second-card .bg-blur .tittle .logo-date .brand-date, .content2 .container .cards .third-card .bg-blur .tittle .logo-date .brand-date {
   margin-left: 10px;
 }
 
-.content2 .container .content .cards .first-card .bg-blur .tittle .logo-date .brand-date span, .content2 .container .content .cards .second-card .bg-blur .tittle .logo-date .brand-date span, .content2 .container .content .cards .third-card .bg-blur .tittle .logo-date .brand-date span {
+.content2 .container .cards .first-card .bg-blur .tittle .logo-date .brand-date span, .content2 .container .cards .second-card .bg-blur .tittle .logo-date .brand-date span, .content2 .container .cards .third-card .bg-blur .tittle .logo-date .brand-date span {
   color: white;
 }
 
-.content2 .container .content .cards .first-card .bg-blur .tittle .logo-date .brand-date span.brand, .content2 .container .content .cards .second-card .bg-blur .tittle .logo-date .brand-date span.brand, .content2 .container .content .cards .third-card .bg-blur .tittle .logo-date .brand-date span.brand {
+.content2 .container .cards .first-card .bg-blur .tittle .logo-date .brand-date span.brand, .content2 .container .cards .second-card .bg-blur .tittle .logo-date .brand-date span.brand, .content2 .container .cards .third-card .bg-blur .tittle .logo-date .brand-date span.brand {
   cursor: pointer;
   font-size: 18px;
   font-weight: 500;
   line-height: 28px;
 }
 
-.content2 .container .content .cards .first-card .bg-blur .tittle .logo-date .brand-date .date-time, .content2 .container .content .cards .second-card .bg-blur .tittle .logo-date .brand-date .date-time, .content2 .container .content .cards .third-card .bg-blur .tittle .logo-date .brand-date .date-time {
+.content2 .container .cards .first-card .bg-blur .tittle .logo-date .brand-date .date-time, .content2 .container .cards .second-card .bg-blur .tittle .logo-date .brand-date .date-time, .content2 .container .cards .third-card .bg-blur .tittle .logo-date .brand-date .date-time {
   color: #718096;
 }
 
-.content2 .container .content .cards .first-card .bg-blur .tittle .logo-date .brand-date .date-time span.time, .content2 .container .content .cards .second-card .bg-blur .tittle .logo-date .brand-date .date-time span.time, .content2 .container .content .cards .third-card .bg-blur .tittle .logo-date .brand-date .date-time span.time {
+.content2 .container .cards .first-card .bg-blur .tittle .logo-date .brand-date .date-time span.time, .content2 .container .cards .second-card .bg-blur .tittle .logo-date .brand-date .date-time span.time, .content2 .container .cards .third-card .bg-blur .tittle .logo-date .brand-date .date-time span.time {
   margin-left: 15px;
 }
 
-.content2 .container .content .cards .first-card .bg-blur .tittle .logo-date .brand-date .date-time span.time i, .content2 .container .content .cards .second-card .bg-blur .tittle .logo-date .brand-date .date-time span.time i, .content2 .container .content .cards .third-card .bg-blur .tittle .logo-date .brand-date .date-time span.time i {
+.content2 .container .cards .first-card .bg-blur .tittle .logo-date .brand-date .date-time span.time i, .content2 .container .cards .second-card .bg-blur .tittle .logo-date .brand-date .date-time span.time i, .content2 .container .cards .third-card .bg-blur .tittle .logo-date .brand-date .date-time span.time i {
   margin-right: 5px;
 }
 
@@ -531,43 +543,46 @@ header .container .content i.moon {
   padding-top: 48px;
 }
 
-.content3 .container .content {
+.content3 .container {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   padding-top: 48px;
 }
 
-.content3 .container .content .left-container h3, .content3 .container .content .right-container h3 {
+.content3 .container .left-container > h3, .content3 .container .right-container > h3 {
+  margin-left: 15px;
+}
+
+.content3 .container .left-container h3, .content3 .container .right-container h3 {
   font-size: 26px;
   line-height: 36px;
   font-weight: 700;
   font-family: 'Libre Baskerville', serif;
 }
 
-.content3 .container .content .left-container h3.editor, .content3 .container .content .right-container h3.editor {
-  margin-left: 15px;
-}
-
-.content3 .container .content .left-container {
+.content3 .container .left-container {
   width: 800px;
 }
 
-.content3 .container .content .left-container .picks {
+.content3 .container .left-container .picks {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
 
-.content3 .container .content .left-container .picks .pick {
+.content3 .container .left-container .picks .pick {
   cursor: pointer;
   width: 50%;
   margin-top: 25px;
 }
 
-.content3 .container .content .left-container .picks .pick .card-box {
+.content3 .container .left-container .picks .pick .card-box {
   padding: 0px 15px;
 }
 
-.content3 .container .content .left-container .picks .pick .card-box .card {
+.content3 .container .left-container .picks .pick .card-box .card {
   border-radius: 15px;
   background-color: white;
   -webkit-box-shadow: rgba(1, 1, 1, 0.05) 1px 1px 5px 0px;
@@ -576,14 +591,14 @@ header .container .content i.moon {
   transition: 0.4s;
 }
 
-.content3 .container .content .left-container .picks .pick .card-box .card:hover {
+.content3 .container .left-container .picks .pick .card-box .card:hover {
   -webkit-transform: translateY(-5px);
           transform: translateY(-5px);
   -webkit-box-shadow: rgba(1, 1, 1, 0.25) 2px 2px 10px 0px;
           box-shadow: rgba(1, 1, 1, 0.25) 2px 2px 10px 0px;
 }
 
-.content3 .container .content .left-container .picks .pick .card-box .card img {
+.content3 .container .left-container .picks .pick .card-box .card img {
   cursor: pointer;
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
@@ -591,14 +606,14 @@ header .container .content i.moon {
   height: 250px;
 }
 
-.content3 .container .content .left-container .picks .pick .card-box .card .card-title {
+.content3 .container .left-container .picks .pick .card-box .card .card-title {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   width: 100%;
   padding: 15px 25px 27.5px;
 }
 
-.content3 .container .content .left-container .picks .pick .card-box .card .card-title > span {
+.content3 .container .left-container .picks .pick .card-box .card .card-title > span {
   display: inline-block;
   color: #5a67d8;
   font-weight: 600;
@@ -608,17 +623,17 @@ header .container .content i.moon {
   padding: 5px 20px;
 }
 
-.content3 .container .content .left-container .picks .pick .card-box .card .card-title > span a {
+.content3 .container .left-container .picks .pick .card-box .card .card-title > span a {
   color: #5a67d8;
   -webkit-transition: 0.4s;
   transition: 0.4s;
 }
 
-.content3 .container .content .left-container .picks .pick .card-box .card .card-title > span a:hover {
+.content3 .container .left-container .picks .pick .card-box .card .card-title > span a:hover {
   color: #4650a8;
 }
 
-.content3 .container .content .left-container .picks .pick .card-box .card .card-title > a {
+.content3 .container .left-container .picks .pick .card-box .card .card-title > a {
   display: inline-block;
   font-size: 21.6px;
   line-height: 1.33;
@@ -628,26 +643,26 @@ header .container .content i.moon {
   transition: 0.4s;
 }
 
-.content3 .container .content .left-container .picks .pick .card-box .card .card-title > a:hover {
+.content3 .container .left-container .picks .pick .card-box .card .card-title > a:hover {
   color: #5a67d8;
 }
 
-.content3 .container .content .left-container .picks .pick .card-box .card .card-title .logo-date {
+.content3 .container .left-container .picks .pick .card-box .card .card-title .logo-date {
   width: 100%;
   margin-top: 16px;
 }
 
-.content3 .container .content .left-container .picks .pick .card-box .card .card-title .logo-date img {
+.content3 .container .left-container .picks .pick .card-box .card .card-title .logo-date img {
   width: 56px;
   height: 56px;
   cursor: pointer;
 }
 
-.content3 .container .content .left-container .picks .pick .card-box .card .card-title .logo-date .brand-date {
+.content3 .container .left-container .picks .pick .card-box .card .card-title .logo-date .brand-date {
   margin-left: 10px;
 }
 
-.content3 .container .content .left-container .picks .pick .card-box .card .card-title .logo-date .brand-date span.brand {
+.content3 .container .left-container .picks .pick .card-box .card .card-title .logo-date .brand-date span.brand {
   cursor: pointer;
   font-size: 18px;
   font-weight: 500;
@@ -655,31 +670,31 @@ header .container .content i.moon {
   color: #2d3748;
 }
 
-.content3 .container .content .left-container .picks .pick .card-box .card .card-title .logo-date .brand-date .date-time {
+.content3 .container .left-container .picks .pick .card-box .card .card-title .logo-date .brand-date .date-time {
   color: #718096;
 }
 
-.content3 .container .content .left-container .picks .pick .card-box .card .card-title .logo-date .brand-date .date-time span.time {
+.content3 .container .left-container .picks .pick .card-box .card .card-title .logo-date .brand-date .date-time span.time {
   margin-left: 15px;
 }
 
-.content3 .container .content .left-container .picks .pick .card-box .card .card-title .logo-date .brand-date .date-time span.time i {
+.content3 .container .left-container .picks .pick .card-box .card .card-title .logo-date .brand-date .date-time span.time i {
   margin-right: 5px;
 }
 
-.content3 .container .content .right-container {
+.content3 .container .right-container {
   width: 400px;
 }
 
-.content3 .container .content .right-container h3 {
+.content3 .container .right-container h3 {
   margin-bottom: 25px;
 }
 
-.content3 .container .content .right-container .topics {
+.content3 .container .right-container .topics {
   padding: 0px 15px;
 }
 
-.content3 .container .content .right-container .topics ul li {
+.content3 .container .right-container .topics ul li {
   margin-bottom: 15px;
   border-radius: 15px;
   background-color: #fff;
@@ -687,7 +702,7 @@ header .container .content i.moon {
           box-shadow: rgba(1, 1, 1, 0.05) 1px 1px 5px 0px;
 }
 
-.content3 .container .content .right-container .topics ul li a {
+.content3 .container .right-container .topics ul li a {
   display: inline-block;
   padding: 15px 20px;
   font-size: 17px;
@@ -696,32 +711,32 @@ header .container .content i.moon {
   color: #718096;
 }
 
-.content3 .container .content .right-container .sponsers {
+.content3 .container .right-container .sponsers {
   padding: 0px 15px;
   margin-top: 48px;
 }
 
-.content3 .container .content .right-container .sponsers a img {
+.content3 .container .right-container .sponsers a img {
   width: 370px;
   height: 270px;
   border-radius: 15px;
 }
 
-.content3 .container .content .right-container .sponsers .advertise {
+.content3 .container .right-container .sponsers .advertise {
   width: 370px;
   text-align: center;
   font-size: 14px;
 }
 
-.content3 .container .content .right-container .sponsers .advertise a {
+.content3 .container .right-container .sponsers .advertise a {
   color: #718096;
 }
 
-.content3 .container .content .right-container .sponsers .advertise a:hover {
+.content3 .container .right-container .sponsers .advertise a:hover {
   color: #5a67d8;
 }
 
-.content3 .container .content .learn-more {
+.content3 .container .learn-more {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   width: 770px;
@@ -734,7 +749,7 @@ header .container .content i.moon {
   padding: 16px;
 }
 
-.content3 .container .content .learn-more h3 {
+.content3 .container .learn-more h3 {
   padding-left: 8px;
   color: #2d3748;
   font-family: 'Libre Baskerville', serif;
@@ -743,7 +758,7 @@ header .container .content i.moon {
   font-weight: 700;
 }
 
-.content3 .container .content .learn-more a {
+.content3 .container .learn-more a {
   padding: 12px 35px;
   line-height: 26px;
   font-weight: 600;
@@ -755,7 +770,7 @@ header .container .content i.moon {
   background-color: #5a67d8;
 }
 
-.content3 .container .content .learn-more a:hover {
+.content3 .container .learn-more a:hover {
   background-color: #4650a8;
 }
 
@@ -765,16 +780,16 @@ header .container .content i.moon {
   padding-bottom: 95px;
 }
 
-.content4 .container .content {
+.content4 .container {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
 
-.content4 .container .content .header-title {
+.content4 .container .header-title {
   padding: 0px 8px;
 }
 
-.content4 .container .content .header-title h3 {
+.content4 .container .header-title h3 {
   color: #2d3748;
   font-family: 'Libre Baskerville', serif;
   font-size: 26px;
@@ -783,7 +798,7 @@ header .container .content i.moon {
   padding: 0px 8px;
 }
 
-.content4 .container .content .header-title a {
+.content4 .container .header-title a {
   display: inline-block;
   margin-top: 7.5px;
   margin-right: 6px;
@@ -796,26 +811,26 @@ header .container .content i.moon {
   transition: 0.4s;
 }
 
-.content4 .container .content .header-title a:hover {
+.content4 .container .header-title a:hover {
   color: #fff;
   background-color: #5a67d8;
 }
 
-.content4 .container .content .fashion-style-cards {
+.content4 .container .fashion-style-cards {
   width: 1200px;
   height: 470px;
 }
 
-.content4 .container .content .fashion-style-cards .pick {
+.content4 .container .fashion-style-cards .pick {
   width: 400px;
   margin-top: 25px;
 }
 
-.content4 .container .content .fashion-style-cards .pick .card-box {
+.content4 .container .fashion-style-cards .pick .card-box {
   padding: 0px 15px;
 }
 
-.content4 .container .content .fashion-style-cards .pick .card-box .card {
+.content4 .container .fashion-style-cards .pick .card-box .card {
   border-radius: 15px;
   background-color: white;
   -webkit-box-shadow: rgba(1, 1, 1, 0.05) 1px 1px 5px 0px;
@@ -824,14 +839,14 @@ header .container .content i.moon {
   transition: 0.4s;
 }
 
-.content4 .container .content .fashion-style-cards .pick .card-box .card:hover {
+.content4 .container .fashion-style-cards .pick .card-box .card:hover {
   -webkit-transform: translateY(-5px);
           transform: translateY(-5px);
   -webkit-box-shadow: rgba(1, 1, 1, 0.25) 2px 2px 10px 0px;
           box-shadow: rgba(1, 1, 1, 0.25) 2px 2px 10px 0px;
 }
 
-.content4 .container .content .fashion-style-cards .pick .card-box .card img {
+.content4 .container .fashion-style-cards .pick .card-box .card img {
   cursor: pointer;
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
@@ -839,14 +854,14 @@ header .container .content i.moon {
   height: 250px;
 }
 
-.content4 .container .content .fashion-style-cards .pick .card-box .card .card-title {
+.content4 .container .fashion-style-cards .pick .card-box .card .card-title {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   width: 100%;
   padding: 30px 25px 27.5px;
 }
 
-.content4 .container .content .fashion-style-cards .pick .card-box .card .card-title > a {
+.content4 .container .fashion-style-cards .pick .card-box .card .card-title > a {
   display: inline-block;
   font-size: 21.6px;
   line-height: 1.33;
@@ -856,26 +871,26 @@ header .container .content i.moon {
   transition: 0.4s;
 }
 
-.content4 .container .content .fashion-style-cards .pick .card-box .card .card-title > a:hover {
+.content4 .container .fashion-style-cards .pick .card-box .card .card-title > a:hover {
   color: #5a67d8;
 }
 
-.content4 .container .content .fashion-style-cards .pick .card-box .card .card-title .logo-date {
+.content4 .container .fashion-style-cards .pick .card-box .card .card-title .logo-date {
   width: 100%;
   margin-top: 16px;
 }
 
-.content4 .container .content .fashion-style-cards .pick .card-box .card .card-title .logo-date img {
+.content4 .container .fashion-style-cards .pick .card-box .card .card-title .logo-date img {
   width: 56px;
   height: 56px;
   cursor: pointer;
 }
 
-.content4 .container .content .fashion-style-cards .pick .card-box .card .card-title .logo-date .brand-date {
+.content4 .container .fashion-style-cards .pick .card-box .card .card-title .logo-date .brand-date {
   margin-left: 10px;
 }
 
-.content4 .container .content .fashion-style-cards .pick .card-box .card .card-title .logo-date .brand-date span.brand {
+.content4 .container .fashion-style-cards .pick .card-box .card .card-title .logo-date .brand-date span.brand {
   cursor: pointer;
   font-size: 18px;
   font-weight: 500;
@@ -883,15 +898,15 @@ header .container .content i.moon {
   color: #2d3748;
 }
 
-.content4 .container .content .fashion-style-cards .pick .card-box .card .card-title .logo-date .brand-date .date-time {
+.content4 .container .fashion-style-cards .pick .card-box .card .card-title .logo-date .brand-date .date-time {
   color: #718096;
 }
 
-.content4 .container .content .fashion-style-cards .pick .card-box .card .card-title .logo-date .brand-date .date-time span.time {
+.content4 .container .fashion-style-cards .pick .card-box .card .card-title .logo-date .brand-date .date-time span.time {
   margin-left: 15px;
 }
 
-.content4 .container .content .fashion-style-cards .pick .card-box .card .card-title .logo-date .brand-date .date-time span.time i {
+.content4 .container .fashion-style-cards .pick .card-box .card .card-title .logo-date .brand-date .date-time span.time i {
   margin-right: 5px;
 }
 
@@ -900,16 +915,16 @@ header .container .content i.moon {
   padding: 80px 0px 95px;
 }
 
-.content5 .container .content {
+.content5 .container {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
 
-.content5 .container .content .header-title {
+.content5 .container .header-title {
   padding: 0px 8px;
 }
 
-.content5 .container .content .header-title h3 {
+.content5 .container .header-title h3 {
   color: #2d3748;
   font-family: 'Libre Baskerville', serif;
   font-size: 26px;
@@ -918,7 +933,7 @@ header .container .content i.moon {
   padding: 0px 8px;
 }
 
-.content5 .container .content .header-title a {
+.content5 .container .header-title a {
   display: inline-block;
   margin-top: 7.5px;
   margin-right: 6px;
@@ -931,27 +946,30 @@ header .container .content i.moon {
   transition: 0.4s;
 }
 
-.content5 .container .content .header-title a:hover {
+.content5 .container .header-title a:hover {
   color: #fff;
   background-color: #5a67d8;
 }
 
-.content5 .container .content .Beauty-cards {
+.content5 .container .Beauty-cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
 
-.content5 .container .content .Beauty-cards .pick {
+.content5 .container .Beauty-cards .pick {
   width: 600px;
   height: 300px;
   margin-top: 25px;
 }
 
-.content5 .container .content .Beauty-cards .pick .card-box {
+.content5 .container .Beauty-cards .pick .card-box {
   padding: 0px 15px;
 }
 
-.content5 .container .content .Beauty-cards .pick .card-box .card {
+.content5 .container .Beauty-cards .pick .card-box .card {
   border-radius: 15px;
   background-color: #fff;
   -webkit-box-shadow: rgba(1, 1, 1, 0.05) 1px 1px 5px 0px;
@@ -960,14 +978,14 @@ header .container .content i.moon {
   transition: 0.4s;
 }
 
-.content5 .container .content .Beauty-cards .pick .card-box .card:hover {
+.content5 .container .Beauty-cards .pick .card-box .card:hover {
   -webkit-transform: translateY(-5px);
           transform: translateY(-5px);
   -webkit-box-shadow: rgba(1, 1, 1, 0.25) 2px 2px 10px 0px;
           box-shadow: rgba(1, 1, 1, 0.25) 2px 2px 10px 0px;
 }
 
-.content5 .container .content .Beauty-cards .pick .card-box .card .image {
+.content5 .container .Beauty-cards .pick .card-box .card .image {
   width: 385px;
   height: 300px;
   border-top-left-radius: 15px;
@@ -975,7 +993,7 @@ header .container .content i.moon {
   overflow: hidden;
 }
 
-.content5 .container .content .Beauty-cards .pick .card-box .card .image img {
+.content5 .container .Beauty-cards .pick .card-box .card .image img {
   cursor: pointer;
   width: 100%;
   height: 300px;
@@ -983,14 +1001,14 @@ header .container .content i.moon {
           transform: scaleX(1.275);
 }
 
-.content5 .container .content .Beauty-cards .pick .card-box .card .card-title {
+.content5 .container .Beauty-cards .pick .card-box .card .card-title {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   width: 100%;
   padding: 30px 25px 27.5px;
 }
 
-.content5 .container .content .Beauty-cards .pick .card-box .card .card-title > a {
+.content5 .container .Beauty-cards .pick .card-box .card .card-title > a {
   display: inline-block;
   font-size: 21.6px;
   line-height: 1.33;
@@ -1000,26 +1018,26 @@ header .container .content i.moon {
   transition: 0.4s;
 }
 
-.content5 .container .content .Beauty-cards .pick .card-box .card .card-title > a:hover {
+.content5 .container .Beauty-cards .pick .card-box .card .card-title > a:hover {
   color: #5a67d8;
 }
 
-.content5 .container .content .Beauty-cards .pick .card-box .card .card-title .logo-date {
+.content5 .container .Beauty-cards .pick .card-box .card .card-title .logo-date {
   width: 100%;
   margin-top: 16px;
 }
 
-.content5 .container .content .Beauty-cards .pick .card-box .card .card-title .logo-date img {
+.content5 .container .Beauty-cards .pick .card-box .card .card-title .logo-date img {
   width: 56px;
   height: 56px;
   cursor: pointer;
 }
 
-.content5 .container .content .Beauty-cards .pick .card-box .card .card-title .logo-date .brand-date {
+.content5 .container .Beauty-cards .pick .card-box .card .card-title .logo-date .brand-date {
   margin-left: 10px;
 }
 
-.content5 .container .content .Beauty-cards .pick .card-box .card .card-title .logo-date .brand-date span.brand {
+.content5 .container .Beauty-cards .pick .card-box .card .card-title .logo-date .brand-date span.brand {
   cursor: pointer;
   font-size: 18px;
   font-weight: 500;
@@ -1027,15 +1045,15 @@ header .container .content i.moon {
   color: #2d3748;
 }
 
-.content5 .container .content .Beauty-cards .pick .card-box .card .card-title .logo-date .brand-date .date-time {
+.content5 .container .Beauty-cards .pick .card-box .card .card-title .logo-date .brand-date .date-time {
   color: #718096;
 }
 
-.content5 .container .content .Beauty-cards .pick .card-box .card .card-title .logo-date .brand-date .date-time span.time {
+.content5 .container .Beauty-cards .pick .card-box .card .card-title .logo-date .brand-date .date-time span.time {
   margin-left: 15px;
 }
 
-.content5 .container .content .Beauty-cards .pick .card-box .card .card-title .logo-date .brand-date .date-time span.time i {
+.content5 .container .Beauty-cards .pick .card-box .card .card-title .logo-date .brand-date .date-time span.time i {
   margin-right: 5px;
 }
 
@@ -1044,16 +1062,16 @@ header .container .content i.moon {
   padding: 95px 0px;
 }
 
-.content6 .container .content {
+.content6 .container {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
 
-.content6 .container .content .header-title {
+.content6 .container .header-title {
   padding: 0px 8px;
 }
 
-.content6 .container .content .header-title h3 {
+.content6 .container .header-title h3 {
   color: #2d3748;
   font-family: 'Libre Baskerville', serif;
   font-size: 26px;
@@ -1062,7 +1080,7 @@ header .container .content i.moon {
   padding: 0px 8px;
 }
 
-.content6 .container .content .header-title a {
+.content6 .container .header-title a {
   display: inline-block;
   margin-top: 7.5px;
   margin-right: 6px;
@@ -1075,27 +1093,30 @@ header .container .content i.moon {
   transition: 0.4s;
 }
 
-.content6 .container .content .header-title a:hover {
+.content6 .container .header-title a:hover {
   color: #fff;
   background-color: #5a67d8;
 }
 
-.content6 .container .content .trending-cards {
+.content6 .container .trending-cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
 
-.content6 .container .content .trending-cards .pick {
+.content6 .container .trending-cards .pick {
   width: 600px;
   height: 300px;
   margin-top: 25px;
 }
 
-.content6 .container .content .trending-cards .pick .card-box {
+.content6 .container .trending-cards .pick .card-box {
   padding: 0px 15px;
 }
 
-.content6 .container .content .trending-cards .pick .card-box .card {
+.content6 .container .trending-cards .pick .card-box .card {
   border-radius: 15px;
   background-color: #fff;
   -webkit-box-shadow: rgba(1, 1, 1, 0.05) 1px 1px 5px 0px;
@@ -1104,14 +1125,14 @@ header .container .content i.moon {
   transition: 0.4s;
 }
 
-.content6 .container .content .trending-cards .pick .card-box .card:hover {
+.content6 .container .trending-cards .pick .card-box .card:hover {
   -webkit-transform: translateY(-5px);
           transform: translateY(-5px);
   -webkit-box-shadow: rgba(1, 1, 1, 0.25) 2px 2px 10px 0px;
           box-shadow: rgba(1, 1, 1, 0.25) 2px 2px 10px 0px;
 }
 
-.content6 .container .content .trending-cards .pick .card-box .card .image {
+.content6 .container .trending-cards .pick .card-box .card .image {
   cursor: pointer;
   width: 385px;
   height: 300px;
@@ -1120,21 +1141,21 @@ header .container .content i.moon {
   overflow: hidden;
 }
 
-.content6 .container .content .trending-cards .pick .card-box .card .image img {
+.content6 .container .trending-cards .pick .card-box .card .image img {
   width: 100%;
   height: 300px;
   -webkit-transform: scaleX(2.05);
           transform: scaleX(2.05);
 }
 
-.content6 .container .content .trending-cards .pick .card-box .card .card-title {
+.content6 .container .trending-cards .pick .card-box .card .card-title {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   width: 100%;
   padding: 30px 25px 27.5px;
 }
 
-.content6 .container .content .trending-cards .pick .card-box .card .card-title > span {
+.content6 .container .trending-cards .pick .card-box .card .card-title > span {
   display: inline-block;
   color: #5a67d8;
   font-weight: 600;
@@ -1144,17 +1165,17 @@ header .container .content i.moon {
   padding: 5px 20px;
 }
 
-.content6 .container .content .trending-cards .pick .card-box .card .card-title > span a {
+.content6 .container .trending-cards .pick .card-box .card .card-title > span a {
   color: #5a67d8;
   -webkit-transition: 0.4s;
   transition: 0.4s;
 }
 
-.content6 .container .content .trending-cards .pick .card-box .card .card-title > span a:hover {
+.content6 .container .trending-cards .pick .card-box .card .card-title > span a:hover {
   color: #4650a8;
 }
 
-.content6 .container .content .trending-cards .pick .card-box .card .card-title > a {
+.content6 .container .trending-cards .pick .card-box .card .card-title > a {
   display: inline-block;
   font-size: 21.6px;
   line-height: 1.33;
@@ -1164,26 +1185,26 @@ header .container .content i.moon {
   transition: 0.4s;
 }
 
-.content6 .container .content .trending-cards .pick .card-box .card .card-title > a:hover {
+.content6 .container .trending-cards .pick .card-box .card .card-title > a:hover {
   color: #5a67d8;
 }
 
-.content6 .container .content .trending-cards .pick .card-box .card .card-title .logo-date {
+.content6 .container .trending-cards .pick .card-box .card .card-title .logo-date {
   width: 100%;
   margin-top: 16px;
 }
 
-.content6 .container .content .trending-cards .pick .card-box .card .card-title .logo-date img {
+.content6 .container .trending-cards .pick .card-box .card .card-title .logo-date img {
   width: 56px;
   height: 56px;
   cursor: pointer;
 }
 
-.content6 .container .content .trending-cards .pick .card-box .card .card-title .logo-date .brand-date {
+.content6 .container .trending-cards .pick .card-box .card .card-title .logo-date .brand-date {
   margin-left: 10px;
 }
 
-.content6 .container .content .trending-cards .pick .card-box .card .card-title .logo-date .brand-date span.brand {
+.content6 .container .trending-cards .pick .card-box .card .card-title .logo-date .brand-date span.brand {
   cursor: pointer;
   font-size: 18px;
   font-weight: 500;
@@ -1191,15 +1212,15 @@ header .container .content i.moon {
   color: #2d3748;
 }
 
-.content6 .container .content .trending-cards .pick .card-box .card .card-title .logo-date .brand-date .date-time {
+.content6 .container .trending-cards .pick .card-box .card .card-title .logo-date .brand-date .date-time {
   color: #718096;
 }
 
-.content6 .container .content .trending-cards .pick .card-box .card .card-title .logo-date .brand-date .date-time span.time {
+.content6 .container .trending-cards .pick .card-box .card .card-title .logo-date .brand-date .date-time span.time {
   margin-left: 15px;
 }
 
-.content6 .container .content .trending-cards .pick .card-box .card .card-title .logo-date .brand-date .date-time span.time i {
+.content6 .container .trending-cards .pick .card-box .card .card-title .logo-date .brand-date .date-time span.time i {
   margin-right: 5px;
 }
 
@@ -1208,13 +1229,13 @@ header .container .content i.moon {
   padding: 95px 0px;
 }
 
-.content7 .container .content {
+.content7 .container {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   padding: 0px 15px;
 }
 
-.content7 .container .content .bg-white {
+.content7 .container .bg-white {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   text-align: center;
@@ -1227,7 +1248,7 @@ header .container .content i.moon {
           box-shadow: rgba(1, 1, 1, 0.05) 1px 1px 5px 0px;
 }
 
-.content7 .container .content .bg-white h3 {
+.content7 .container .bg-white h3 {
   font-size: 26px;
   line-height: 36px;
   font-weight: 700;
@@ -1236,14 +1257,14 @@ header .container .content i.moon {
   font-family: 'Libre Baskerville', serif;
 }
 
-.content7 .container .content .bg-white p {
+.content7 .container .bg-white p {
   font-size: 18px;
   line-height: 28px;
   margin-bottom: 48px;
   color: #718096;
 }
 
-.content7 .container .content .bg-white form input {
+.content7 .container .bg-white form input {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   position: relative;
@@ -1258,11 +1279,11 @@ header .container .content i.moon {
   padding-left: 20px;
 }
 
-.content7 .container .content .bg-white form button:hover label {
+.content7 .container .bg-white form button:hover label {
   background-color: #4650a8;
 }
 
-.content7 .container .content .bg-white form button label {
+.content7 .container .bg-white form button label {
   cursor: pointer;
   padding: 12px 35px;
   font-size: 16px;
@@ -1275,29 +1296,29 @@ header .container .content i.moon {
   color: #fff;
 }
 
-footer .container .content {
+footer .container {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   height: 460px;
   padding-top: 64px;
 }
 
-footer .container .content .info {
+footer .container .info {
   width: 390px;
   padding: 0px 15px;
   height: 333;
 }
 
-footer .container .content .info a.logo {
+footer .container .info a.logo {
   margin: -5px 0px 15px;
 }
 
-footer .container .content .info a.logo i {
+footer .container .info a.logo i {
   color: #5a67d8;
   font-size: 26px;
 }
 
-footer .container .content .info a.logo h1 {
+footer .container .info a.logo h1 {
   margin-left: 10px;
   color: #2d3748;
   font-weight: 600;
@@ -1305,13 +1326,13 @@ footer .container .content .info a.logo h1 {
   font-family: 'Hind', sans-serif;
 }
 
-footer .container .content .info p {
+footer .container .info p {
   color: #718096;
   font-size: 18px;
   line-height: 28px;
 }
 
-footer .container .content .info span {
+footer .container .info span {
   display: inline-block;
   margin-top: 8px;
   font-weight: 600;
@@ -1321,30 +1342,33 @@ footer .container .content .info span {
   font-family: 'Libre Baskerville', serif;
 }
 
-footer .container .content .info span a {
+footer .container .info span a {
   color: #5a67d8;
 }
 
-footer .container .content .info span a:hover {
+footer .container .info span a:hover {
   color: #4650a8;
 }
 
-footer .container .content .contact {
+footer .container .contact {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   width: 800px;
   height: 333px;
 }
 
-footer .container .content .contact ul {
+footer .container .contact ul {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   width: 227px;
 }
 
-footer .container .content .contact ul span {
+footer .container .contact ul span {
   display: inline-block;
 }
 
-footer .container .content .contact ul > span {
+footer .container .contact ul > span {
   color: #2d3748;
   font-size: 20px;
   line-height: 28px;
@@ -1353,7 +1377,7 @@ footer .container .content .contact ul > span {
   font-family: 'Libre Baskerville', serif;
 }
 
-footer .container .content .contact ul li a {
+footer .container .contact ul li a {
   color: #718096;
   font-size: 18px;
   line-height: 24px;
@@ -1362,50 +1386,50 @@ footer .container .content .contact ul li a {
   transition: 0.4s;
 }
 
-footer .container .content .contact ul li a:hover {
+footer .container .contact ul li a:hover {
   color: #2d3748;
 }
 
-footer .container .content .contact ul.recent {
+footer .container .contact ul.recent {
   margin-right: 30px;
 }
 
-footer .container .content .contact ul.recent li span {
+footer .container .contact ul.recent li span {
   font-size: 80%;
   margin-bottom: 16px;
   color: #718096;
 }
 
-footer .container .content .contact ul.categories {
+footer .container .contact ul.categories {
   margin-right: 32px;
 }
 
-footer .container .content .contact ul.categories li {
+footer .container .contact ul.categories li {
   margin-bottom: 8px;
 }
 
-footer .container .content .contact ul.social li {
+footer .container .contact ul.social li {
   margin-bottom: 8px;
 }
 
-footer .container .content .contact ul.social li a i {
+footer .container .contact ul.social li a i {
   font-size: 14px;
   width: 25px;
 }
 
-footer .container .content .contact ul.social li a i.fb {
+footer .container .contact ul.social li a i.fb {
   color: #3a5998;
 }
 
-footer .container .content .contact ul.social li a i.twitter {
+footer .container .contact ul.social li a i.twitter {
   color: #55acee;
 }
 
-footer .container .content .contact ul.social li a i.linkedin {
+footer .container .contact ul.social li a i.linkedin {
   color: #00a0dc;
 }
 
-footer .container .content .contact ul.social li a i.dribbble {
+footer .container .contact ul.social li a i.dribbble {
   color: #ea4c89;
 }
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=test_style.css.map */
